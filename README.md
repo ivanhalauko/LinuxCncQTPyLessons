@@ -7,4 +7,5 @@ I hope that I will succeed.
 1) Installed VirtualBox on my PC for development and studing.
 2) Created shared folder amid VB LinuxCNC and master PC with GIT repository project.
 3) Executed first video part before 7:20 .
-4) Install PuCharm on VB LinuxCNC machine.
+4) Install PyCharm on VB LinuxCNC machine.
+5) PythonProject created from VB LinuxCNC machine in master branch.
