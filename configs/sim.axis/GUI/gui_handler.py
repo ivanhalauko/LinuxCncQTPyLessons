@@ -54,6 +54,12 @@ class HandlerClass:
     def initialized__(self):
         KEYBIND.add_call('Key_F12','on_keycall_F12')
 
+        ##view section
+        self.w.pb_view_z.clicked.connect(lambda w: self.view_action('z'))
+        self.w.pb_view_clear.clicked.connect(lambda w: self.view_action('clear'))
+        self.w.pb_view_zoom_in.clicked.connect(lambda w: self.view_action('zoom-in'))
+        self.w.pb_view_zoom_out.clicked.connect(lambda w: self.view_action('zoom-out'))
+
     def processed_key_event__(self,receiver,event,is_pressed,key,code,shift,cntrl):
         # when typing in MDI, we don't want keybinding to call functions
         # so we catch and process the events directly.
@@ -108,6 +114,10 @@ class HandlerClass:
     #######################
     # callbacks from form #
     #######################
+
+    def view_action(selfself, view):
+        if view in ('z', 'clear', 'zoom-in', 'zoom-out'):
+            STATUS.emit('graphics-view-changed', view, None)
 
     #####################
     # general functions #
